@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-
+import { useGlitchInView } from '../hooks/useGlitchInView';
 
 type SectionProps = {
     children: React.ReactNode,
@@ -8,6 +8,8 @@ type SectionProps = {
 
 const Section: React.FC<SectionProps> = ({ children, title }) => {
     const ref = useRef<HTMLDivElement>(null);
+
+    const glitchRef = useGlitchInView<HTMLHeadingElement>()
     const [inView, setInView] = useState(false);
 
     useEffect(() => {
@@ -29,7 +31,7 @@ const Section: React.FC<SectionProps> = ({ children, title }) => {
                 transition: 'opacity 1s ease-out',
             }}
         >
-            <h1 className="section-title">{"/" + title.toLowerCase()}</h1>
+            <h1 ref={glitchRef} className="section-title">{"/" + title.toLowerCase()}</h1>
             <div className="section">{children}</div>
         </div>
     )

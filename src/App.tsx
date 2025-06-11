@@ -1,31 +1,31 @@
-import React from 'react';
-import MatrixRainingLetters from './matrix/Matrix';
+import { useEffect, useState } from 'react';
+import MusicPlayer from './components/MusicPlayer';
 import Navbar from './components/Navbar';
+import MatrixRainingLetters from './matrix/Matrix';
 import About from './pages/About';
+import Contact from './pages/Contact';
 import Education from './pages/Education';
 import Header from './pages/Header';
 import Publications from './pages/Publications';
 import Research from './pages/Research';
 import Work from './pages/Work';
-import Contact from './pages/Contact';
 
 const App = () => {
+  const [visibleMain, setVisbleMain] = useState(false);
+  const [visibleMatrix, setVisibleMatrix] = useState(true);
 
-  const [visibleMain, setVisbleMain] = React.useState(false);
-  const [visibleMatrix, setVisibleMatrix] = React.useState(true);
-
-  React.useEffect(() => {
+  useEffect(() => {
     const timeout = setTimeout(() => {
       setVisbleMain(true);
-    }, 3000); // 5 seconds
+    }, 3000);
 
     return () => clearTimeout(timeout);
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timeout = setTimeout(() => {
       setVisibleMatrix(false);
-    }, 3000); // 3 seconds
+    }, 3000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -63,6 +63,7 @@ const App = () => {
         <Research />
         <Work />
         <Contact />
+        <MusicPlayer />
       </div>
     </div>
   )
