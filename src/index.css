@@ -49,6 +49,19 @@ a:hover {
     color: #00ff2b;
 }
 
+
+.navbar span {
+    font-family: monospace;
+    font-weight: bold;
+    color: #00ff2b;
+}
+
+.navbar span:hover {
+    color: #36ba01;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .header {
     height: 100vh;
     display: flex;

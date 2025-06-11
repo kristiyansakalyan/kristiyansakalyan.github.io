@@ -1,12 +1,19 @@
+const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    }
+};
+
 const Navbar = () => (
     <nav className="navbar">
-        <a href="#header">/home</a>
-        <a href="#about">/about</a>
-        <a href="#publications">/publication</a>
-        <a href="#education">/education</a>
-        <a href="#research">/research</a>
-        <a href="#work">/work</a>
+        <span onClick={() => scrollTo("header")}>/home</span>
+        <span onClick={() => scrollTo("about")}>/about</span>
+        <span onClick={() => scrollTo("publications")}>/publication</span>
+        <span onClick={() => scrollTo("education")}>/education</span>
+        <span onClick={() => scrollTo("research")}>/research</span>
+        <span onClick={() => scrollTo("work")}>/work</span>
     </nav>
-)
+);
 
 export default Navbar;
