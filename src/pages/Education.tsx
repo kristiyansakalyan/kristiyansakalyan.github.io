@@ -8,7 +8,7 @@ const Education = () => (
                 <p className="experience-sub">M.Sc. in Data Engineering & Analytics <span className="date">Expected Sep 2025</span></p>
                 <ul>
                     <li>Expected average grade: 1.2</li>
-                    <li><a href="/public/Ranking_2023w_Sakalyan.pdf" target="_blank">Top 4% of cohort</a></li>
+                    <li><a href="/Ranking_2023w_Sakalyan.pdf" target="_blank">Top 4% of cohort</a></li>
                 </ul>
             </div>
 

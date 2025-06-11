@@ -41,13 +41,6 @@ const About = () => (
                 />
                 <p className="about-location">Munich, Germany</p>
             </div>
-            {/* <div style={{ width: '100%', justifyContent: 'center', marginTop: '1rem', display: 'flex' }}>
-                <img src="/hacker.png" alt="img" style={{ width: '20px', height: '20px', paddingRight: '12px' }} />
-                <a href="/public/CV.pdf" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    Download my CV
-                </a>
-                <img src="/hacker.png" alt="img" style={{ width: '20px', height: '20px', paddingLeft: '12px' }} />
-            </div> */}
             <div
                 style={{
                     width: '100%',
@@ -77,7 +70,7 @@ const About = () => (
                     }}
                 >
                     <span>$</span> wget&nbsp;
-                    <span style={{color: 'white'}}>https://kristiyansakalyan.com/CV.pdf</span>
+                    <span style={{ color: 'white' }}>https://kristiyansakalyan.github.io/CV.pdf</span>
                 </a>
                 <img
                     src="/hacker.png"

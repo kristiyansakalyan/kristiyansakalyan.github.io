@@ -13,6 +13,7 @@ const Navbar = () => (
         <span onClick={() => scrollTo("education")}>/education</span>
         <span onClick={() => scrollTo("research")}>/research</span>
         <span onClick={() => scrollTo("work")}>/work</span>
+        <span onClick={() => scrollTo("contact")}>/contact</span>
     </nav>
 );
 

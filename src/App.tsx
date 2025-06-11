@@ -7,6 +7,7 @@ import Header from './pages/Header';
 import Publications from './pages/Publications';
 import Research from './pages/Research';
 import Work from './pages/Work';
+import Contact from './pages/Contact';
 
 const App = () => {
 
@@ -61,6 +62,7 @@ const App = () => {
         <Education />
         <Research />
         <Work />
+        <Contact />
       </div>
     </div>
   )

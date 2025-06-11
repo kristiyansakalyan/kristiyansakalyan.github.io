@@ -126,14 +126,13 @@ a:hover {
 
 .section-wrapper {
     padding: 6rem 0;
+    transition: opacity 1s ease-out;
+    will-change: opacity;
+    opacity: 0.1;
 }
 
-.section-title {
-    font-size: 2rem;
-    color: #00ff2b;
-    font-family: monospace;
-    margin: 0 auto 2rem;
-    max-width: 800px;
+.section-wrapper.section--visible {
+    opacity: 1;
 }
 
 .section {
@@ -146,11 +145,21 @@ a:hover {
     border: 1px solid #009a22;
     color: #ffffff;
     backdrop-filter: blur(4px);
+    transition: box-shadow 0.6s ease;
 }
 
-.section:hover {
+.section-wrapper.section--visible .section {
     box-shadow: 0 0 86px 6px rgba(0, 154, 34, 0.25);
 }
+
+.section-title {
+    font-size: 2rem;
+    color: #00ff2b;
+    font-family: monospace;
+    margin: 0 auto 2rem;
+    max-width: 800px;
+}
+
 
 .about-container {
     display: flex;
@@ -286,6 +295,26 @@ html {
     /* color: red; */
     opacity: 0.8;
 }
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 1rem;
+}
+
+.contact-icon {
+    font-size: 2.2rem;
+    color: #00ff2b;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2);
+    color: #36ba01;
+}
+
 
 /* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
 
