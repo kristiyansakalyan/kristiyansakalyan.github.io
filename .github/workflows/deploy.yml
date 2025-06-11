@@ -25,7 +25,8 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8
-          run_install: true # this will run `pnpm install` automatically and cache it
+          # this will run `pnpm install` automatically and cache it
+          run_install: true
 
       - name: Build project
         run: pnpm run build
