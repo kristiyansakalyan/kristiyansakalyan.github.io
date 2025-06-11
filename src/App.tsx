@@ -1,5 +1,5 @@
 import React from 'react';
-import { MatrixRainingLetters } from "react-mdr";
+import MatrixRainingLetters from './matrix/Matrix';
 import Navbar from './components/Navbar';
 import About from './pages/About';
 import Education from './pages/Education';

@@ -1,6 +1,6 @@
 
 const Header = () => (
-    <div className="header">
+    <div id="header" className="header">
         <div className="animated-name">
             <div className="line line-top"></div>
             <h1 className="glitch">Kristiyan Sakalyan</h1>

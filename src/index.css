@@ -83,6 +83,7 @@ a:hover {
     transform: scaleX(0);
     transform-origin: left;
     animation: draw-line-left 1s forwards;
+    animation-delay: 4s;
 }
 
 .line-bottom {
@@ -91,7 +92,7 @@ a:hover {
     transform: scaleX(0);
     transform-origin: right;
     animation: draw-line-right 1s forwards;
-    animation-delay: 0.4s;
+    animation-delay: 4.4s;
 }
 
 @keyframes draw-line-left {
