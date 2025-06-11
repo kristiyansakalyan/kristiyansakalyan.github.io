@@ -43,23 +43,17 @@ a:hover {
     z-index: 1000;
 }
 
-.navbar a {
-    font-family: monospace;
-    font-weight: bold;
-    color: #00ff2b;
-}
-
-
 .navbar span {
     font-family: monospace;
     font-weight: bold;
     color: #00ff2b;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .navbar span:hover {
     color: #36ba01;
     text-decoration: underline;
-    cursor: pointer;
 }
 
 .header {
