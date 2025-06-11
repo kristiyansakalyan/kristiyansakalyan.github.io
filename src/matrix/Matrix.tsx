@@ -1,4 +1,3 @@
-// components/MatrixRainingLetters.tsx
 import React, { useEffect, useRef } from "react";
 import "./styles.css";
 
@@ -8,18 +7,15 @@ type MatrixRainingLettersProps = {
     key?: string;
 };
 
-const renderMatrix = (
-    ref: React.RefObject<HTMLCanvasElement | null>,
-    color?: string
-) => {
-    const canvas = ref.current;
-    if (!canvas) return () => { };
-
-    const context = canvas.getContext("2d");
-    if (!context) return () => { };
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+const MatrixRainingLetters: React.FC<MatrixRainingLettersProps> = ({
+    color,
+    custom_class = "",
+    key: propKey,
+}) => {
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const intervalRef = useRef<number | null>(null);
+    const fontSize = 16;
+    let rainDrops: number[] = [];
 
     const katakana =
         "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
@@ -27,51 +23,66 @@ const renderMatrix = (
     const nums = "0123456789";
     const alphabet = katakana + latin + nums;
 
-    const fontSize = 16;
-    const columns = canvas.width / fontSize;
+    const setupCanvas = () => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
 
-    const rainDrops: number[] = [];
-    for (let x = 0; x < columns; x++) {
-        rainDrops[x] = 1;
-    }
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-    const render = () => {
-        context.fillStyle = "rgba(0, 0, 0, 0.05)";
-        context.fillRect(0, 0, canvas.width, canvas.height);
+        const columns = Math.floor(canvas.width / fontSize);
+        rainDrops = Array(columns).fill(1);
+    };
 
-        context.fillStyle = color ?? "#0F0";
-        context.font = `${fontSize}px monospace`;
+    const draw = () => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = color ?? "#0F0";
+        ctx.font = `${fontSize}px monospace`;
 
         for (let i = 0; i < rainDrops.length; i++) {
             const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-            context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+            ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
 
             if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
                 rainDrops[i] = 0;
             }
-            rainDrops[i]++;
+
+            rainDrops[i] += 0.5; // Slower fall speed
         }
     };
 
-    return render;
-};
+    useEffect(() => {
+        setupCanvas();
+        const id = setInterval(draw, 20); // Lower FPS for a smoother slower effect
+        intervalRef.current = id;
 
-const MatrixRainingLetters: React.FC<MatrixRainingLettersProps> = ({
-    color,
-    custom_class = "",
-    key: propKey
-}) => {
-    const ref = useRef<HTMLCanvasElement>(null);
+        const handleResize = () => {
+            setupCanvas();
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [color]);
+
     const keyName = "mrl-" + (propKey ?? "default");
     const className = `mrl-container ${custom_class}`;
 
-    useEffect(() => {
-        const render = renderMatrix(ref, color);
-        const intervalId = setInterval(render, 30);
-        return () => clearInterval(intervalId);
-    }, [color]);
-
-    return <canvas key={keyName} className={className} ref={ref} />;
+    return <canvas key={keyName} className={className} ref={canvasRef} />;
 };
 
 export default MatrixRainingLetters;
