@@ -1,4 +1,3 @@
-// components/ExperienceItem.tsx
 import React from 'react';
 
 type ExperienceItemProps = {

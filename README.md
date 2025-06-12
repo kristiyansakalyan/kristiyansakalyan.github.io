@@ -16,6 +16,7 @@ Built with **React**, **Vite**, **TypeScript**, and a healthy dose of `pnpm`.
 - Custom Matrix rain animation via canvas (reused from [this repo](https://github.com/FullStackWithLawrence/react-mdr/tree/main)) 🌧️  
 - Animated transitions and focus-based opacity for smoother section transitions ✨  
 - Random glitch effects on elements when they enter the viewport 🎞️  
+- - Matrix-style cursor trail with katakana, Latin, and numeric characters following the mouse 🖱️🟩
 - Background music from the [Free Music Archive](https://pixabay.com/no/music/optimistisk-cyberpunk-trailer-255002/) 🎵  
 - CI/CD via GitHub Actions + GitHub Pages deployment 📦  
 

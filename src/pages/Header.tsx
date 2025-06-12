@@ -1,4 +1,3 @@
-
 const Header = () => (
     <div id="header" className="header">
         <div className="animated-name">

@@ -9,6 +9,7 @@ import Header from './pages/Header';
 import Publications from './pages/Publications';
 import Research from './pages/Research';
 import Work from './pages/Work';
+import MatrixCursorTrail from './components/MatrixCursorTrail';
 
 const App = () => {
   const [visibleMain, setVisbleMain] = useState(false);
@@ -64,6 +65,7 @@ const App = () => {
         <Work />
         <Contact />
         <MusicPlayer />
+        <MatrixCursorTrail />
       </div>
     </div>
   )
