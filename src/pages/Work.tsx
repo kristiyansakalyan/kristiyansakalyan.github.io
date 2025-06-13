@@ -2,7 +2,7 @@ import ExperienceItem from "../components/ExperienceItem";
 import Section from "../components/Section";
 
 const Work = () => (
-    <Section title="Work">
+    <Section title="Work" noBorder>
         <div className="experience-list">
             <ExperienceItem
                 title="Machine Learning Engineer"

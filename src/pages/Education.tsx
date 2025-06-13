@@ -1,7 +1,7 @@
 import Section from "../components/Section";
 
 const Education = () => (
-    <Section title="Education">
+    <Section title="Education" noBorder>
         <div className="experience-list">
             <div className="experience-item">
                 <h3>Technical University of Munich (TUM)</h3>

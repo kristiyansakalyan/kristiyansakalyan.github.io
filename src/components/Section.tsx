@@ -4,9 +4,10 @@ import { useGlitchInView } from '../hooks/useGlitchInView';
 type SectionProps = {
     children: React.ReactNode,
     title: string
+    noBorder?: boolean
 }
 
-const Section: React.FC<SectionProps> = ({ children, title }) => {
+const Section: React.FC<SectionProps> = ({ children, title, noBorder = false }) => {
     const ref = useRef<HTMLDivElement>(null);
 
     const glitchRef = useGlitchInView<HTMLHeadingElement>()
@@ -32,7 +33,11 @@ const Section: React.FC<SectionProps> = ({ children, title }) => {
             }}
         >
             <h1 ref={glitchRef} className="section-title">{"/" + title.toLowerCase()}</h1>
-            <div className="section">{children}</div>
+            <div className="section" style={noBorder ? {
+                boxShadow: 'none',
+                border: 'none',
+                backgroundColor: 'transparent',
+            } : {}}>{children}</div>
         </div>
     )
 }

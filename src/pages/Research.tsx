@@ -4,7 +4,7 @@ import ExperienceItem from '../components/ExperienceItem';
 
 const Research = () => (
 
-    <Section title="Research">
+    <Section title="Research" noBorder>
         <div className="experience-list">
             <ExperienceItem
                 title="Modeling Microenvironment Trajectories on Spatial Transcriptomics"

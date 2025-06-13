@@ -188,8 +188,8 @@ a:hover {
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #00ff2b;
-    box-shadow: 0 0 10px rgba(0, 255, 43, 0.3);
+    /* border: 2px solid #00ff2b; */
+    box-shadow: 0 0 20px rgba(0, 255, 43, 0.3);
 }
 
 .about-location {
@@ -335,14 +335,18 @@ html {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    width: 48px;
+    height: 48px;
     background-color: rgba(0, 154, 34, 0.8);
     border: 2px solid #00ff2b;
     border-radius: 50%;
-    padding: 0.6rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #000;
     cursor: pointer;
     z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.2s ease;
 }
 

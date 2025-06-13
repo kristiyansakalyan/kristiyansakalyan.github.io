@@ -2,7 +2,7 @@ import Section from "../components/Section";
 import PublicationItem from "../components/PublicationItem";
 
 const Publications = () => (
-    <Section title="Publications">
+    <Section title="Publications" noBorder>
         <PublicationItem
             title="Modeling Microenvironment Trajectories on Spatial Transcriptomics with NicheFlow"
             authors="Kristiyan Sakalyan*, Alessandro Palma*, Filippo Guerranti*, Fabian Theis, Stephan Günnemann"
