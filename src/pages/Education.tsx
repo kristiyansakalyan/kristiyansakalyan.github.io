@@ -7,7 +7,7 @@ const Education = () => (
                 <h3>Technical University of Munich (TUM)</h3>
                 <p className="experience-sub">M.Sc. in Data Engineering & Analytics <span className="date">Expected Sep 2025</span></p>
                 <ul>
-                    <li>Expected average grade: 1.2</li>
+                    <li>Expected average grade: <a href="/Grade_Report_Master.pdf" target="_blank">1.2</a></li>
                     <li><a href="/Ranking_2023w_Sakalyan.pdf" target="_blank">Top 4% of cohort</a></li>
                 </ul>
             </div>
