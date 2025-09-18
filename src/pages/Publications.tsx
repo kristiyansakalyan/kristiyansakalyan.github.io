@@ -8,7 +8,7 @@ const Publications = () => (
             authors="Kristiyan Sakalyan*, Alessandro Palma*, Filippo Guerranti*, Fabian Theis, Stephan Günnemann"
             venue={
                 <>
-                    <a href="https://genbio-workshop.github.io/2025/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://icml.cc/virtual/2025/51253" target="_blank" rel="noopener noreferrer">
                         ICML 2025 GenBio Workshop
                     </a>
                 </>
