@@ -8,10 +8,10 @@ const Header = () => (
 
         <ul className="info-list">
             <li>
-                M.Sc. Data Engineering & Analytics @ <a href="https://www.tum.de">TUM</a>
+                Research Scientist @ <a href="https://www.helmholtz-munich.de/en/">Helmholtz Munich</a>
             </li>
             <li>
-                ML Engineer @ <a href="https://www.rohde-schwarz.com">Rohde & Schwarz</a>
+                Parf of the <a href="https://www.eml-munich.de/">EML Group</a> led by <a href="https://www.eml-munich.de/people/zeynep-akata">Prof. Dr. Zeynep Akata</a>
             </li>
         </ul>
     </div>

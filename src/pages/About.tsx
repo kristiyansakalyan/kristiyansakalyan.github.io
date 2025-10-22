@@ -1,4 +1,5 @@
 import Section from "../components/Section";
+import { scrollTo } from "../common/utils";
 
 const About = () => (
 
@@ -10,21 +11,51 @@ const About = () => (
                     <a href="https://www.tum.de" target="_blank" rel="noopener noreferrer">
                         Technical University of Munich (TUM)
                     </a>
-                    , where I did my Bachelor’s in Computer Science and stayed for a Master’s in Data Engineering and Analytics.
-                    I’m currently working on my Master’s thesis about machine learning for spatial single-cell data with{' '}
+                    , where I completed my Bachelor’s in Computer Science and Master’s in Data Engineering and Analytics.
+                </p>
+                <p>
+                    I recently finished my Master’s thesis on machine learning for spatial single-cell data, conducted with{' '}
                     <a href="https://scholar.google.com/citations?hl=en&user=hf0csdoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">
                         Alessandro Palma
-                    </a> and{' '}
+                    </a>{' '}
+                    and{' '}
                     <a href="https://guerrantif.github.io/" target="_blank" rel="noopener noreferrer">
                         Filippo Guerranti
-                    </a>
-                    {' '}under the supervision of{' '}
+                    </a>{' '}
+                    under the supervision of{' '}
                     <a href="https://www.helmholtz-munich.de/en/icb/pi/fabian-theis" target="_blank" rel="noopener noreferrer">
                         Prof. Dr. Dr. Fabian Theis
-                    </a>,
+                    </a>{' '}
                     and{' '}
                     <a href="https://www.cs.cit.tum.de/daml/guennemann/" target="_blank" rel="noopener noreferrer">
                         Prof. Dr. Stephan Günnemann
+                    </a>.
+                    The{' '}
+                    <a
+                        href=""
+                        onClick={(e) => {
+                            e.preventDefault();
+                            scrollTo("publications");
+                        }}
+                    >
+                        work
+                    </a>{' '}
+                    was accepted at{' '}
+                    <strong>NeurIPS 2025</strong> and the{' '}
+                    <strong>ICML GenBio Workshop 2025</strong>.
+                </p>
+                <p>
+                    I'm currently working as a Research Scientist at{' '}
+                    <a href="https://www.helmholtz-munich.de/en/" target="_blank" rel="noopener noreferrer">
+                        Helmholtz Munich
+                    </a>{' '}
+                    in the{' '}
+                    <a href="https://www.eml-munich.de/" target="_blank" rel="noopener noreferrer">
+                        EML Group
+                    </a>{' '}
+                    led by{' '}
+                    <a href="https://www.eml-munich.de/people/zeynep-akata" target="_blank" rel="noopener noreferrer">
+                        Prof. Dr. Zeynep Akata
                     </a>.
                 </p>
                 <p>

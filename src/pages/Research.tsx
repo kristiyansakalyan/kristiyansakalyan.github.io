@@ -9,16 +9,21 @@ const Research = () => (
             <ExperienceItem
                 title="Modeling Microenvironment Trajectories on Spatial Transcriptomics"
                 company="TUM"
-                date="Jan 2024 - Present"
+                date="Jan 2025 - Sep 2025"
                 bullets={[
-                    "Graph and point cloud modeling of single-cell dynamics using Flow Matching and Optimal Transport."
+                    <>
+                        Graph and point cloud modeling of single-cell dynamics using Flow Matching and Optimal Transport.{' '}
+                        <a href="https://www.cs.cit.tum.de/daml/nicheflow/" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon="globe" /> Project page
+                        </a>
+                    </>
                 ]}
             />
 
             <ExperienceItem
                 title="Conditional Flow Matching for Temporal Graphs"
                 company="TUM"
-                date="Oct 2024 - Jan 2024"
+                date="Oct 2024 - Jan 2025"
                 bullets={[
                     <>
                         Extended flow matching to dynamic temporal graphs.{" "}

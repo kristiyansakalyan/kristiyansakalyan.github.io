@@ -8,6 +8,10 @@ const Publications = () => (
             authors="Kristiyan Sakalyan*, Alessandro Palma*, Filippo Guerranti*, Fabian Theis, Stephan Günnemann"
             venue={
                 <>
+                    <a href="https://neurips.cc/virtual/2025/poster/119831" target="_blank" rel="noopener noreferrer">
+                        NeurIPS 2025
+                    </a>
+                    ,
                     <a href="https://icml.cc/virtual/2025/51253" target="_blank" rel="noopener noreferrer">
                         ICML 2025 GenBio Workshop
                     </a>

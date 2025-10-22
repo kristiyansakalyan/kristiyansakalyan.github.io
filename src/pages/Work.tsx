@@ -5,12 +5,23 @@ const Work = () => (
     <Section title="Work" noBorder>
         <div className="experience-list">
             <ExperienceItem
-                title="Machine Learning Engineer"
-                company="Rohde & Schwarz"
-                date="Jan 2025 - Present"
+                title="Research Scientist"
+                company="Helmholtz Munich"
+                date="Oct 2025 - Present"
                 bullets={[
                     <>
-                        Researching computer vision methods that can be applied to{' '}
+                        Parf of the <a href="https://www.eml-munich.de/">EML Group</a>{' '}
+                        led by <a href="https://www.eml-munich.de/people/zeynep-akata">Prof. Dr. Zeynep Akata</a>
+                    </>
+                ]}
+            />
+
+            <ExperienceItem
+                title="Machine Learning Engineer"
+                company="Rohde & Schwarz"
+                date="Jan 2025 - Oct 2025"
+                bullets={[
+                    <>Researching computer vision methods that can be applied to{' '}
                         <a
                             href="https://www.rohde-schwarz.com/ch/produkte/aerospace-verteidigung-sicherheit/sicherheitsscanner/rs-qps-walk2000_63493-978496.html"
                             target="_blank"
@@ -18,7 +29,11 @@ const Work = () => (
                         >
                             QPS Walk 2000
                         </a>
-                    </>
+                    </>,
+                    "Differentiable Threshold Optimization",
+                    "Differentiable Top-K and Crop Selection",
+                    "Deterministic Re-implementation of a Custom High-Speed PyTorch DataLoader",
+                    "Anomaly Detection with PatchCore"
                 ]}
             />
 

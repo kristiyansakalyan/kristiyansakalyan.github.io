@@ -1,9 +1,4 @@
-const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-    }
-};
+import { scrollTo } from "../common/utils";
 
 const Navbar = () => (
     <nav className="navbar">
