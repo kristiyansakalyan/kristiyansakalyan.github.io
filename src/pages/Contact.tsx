@@ -5,7 +5,7 @@ import Section from '../components/Section';
 
 const iconLinks = [
     {
-        href: 'mailto:kristiyan.sakalyan@tum.de',
+        href: 'mailto:k.sakalyan@tum.de',
         icon: faEnvelope,
         label: 'Email',
     },
